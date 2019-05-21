@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="30 seconds">
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %boldRed(%X{traceId}) %highlight(%-5level) %boldGreen(%logger{36}) | %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <appender name="info"  class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/info.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!--日志文件输出的文件名-->
+            <FileNamePattern>logs/info.log.%d{yyyy-MM-dd}.gz</FileNamePattern>
+            <MaxHistory>10</MaxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %X{traceId} %-5level %logger{36} | %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <!--日志文件最大的大小-->
+        <!--<triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">-->
+            <!--<MaxFileSize>10MB</MaxFileSize>-->
+        <!--</triggeringPolicy>&ndash;&gt;-->
+    </appender>
+
+    <appender name="thrift"  class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/thrift.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!--日志文件输出的文件名-->
+            <FileNamePattern>logs/thrift.log.%d{yyyy-MM-dd}.gz</FileNamePattern>
+            <MaxHistory>10</MaxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %X{traceId} %-5level %logger{36} | %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <appender name="error"  class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/error.log</file>
+        <!-- deny all events with a level below ERROR-->
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!--日志文件输出的文件名-->
+            <FileNamePattern>logs/error.log.%d{yyyy-MM-dd}.gz</FileNamePattern>
+            <MaxHistory>10</MaxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %X{traceId} %-5level %logger{36} | %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <appender name="filter"  class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/filter.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!--日志文件输出的文件名-->
+            <FileNamePattern>logs/filter.log.%d{yyyy-MM-dd}.gz</FileNamePattern>
+            <MaxHistory>10</MaxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %X{traceId} %-5level %logger{36} | %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <appender name="socket"  class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/socket.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!--日志文件输出的文件名-->
+            <FileNamePattern>logs/socket.log.%d{yyyy-MM-dd}.gz</FileNamePattern>
+            <MaxHistory>10</MaxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %X{traceId} %-5level %logger{36} | %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="info"/>
+        <appender-ref ref="error"/>
+    </root>
+
+    <logger name="mobi.mixiong.wc.web.log.LoggerFilter" additivity="false">
+        <appender-ref ref="filter" />
+    </logger>
+
+    <logger name="mobi.mixiong.wc.wehub.api.WebsocketHandler" additivity="false">
+        <appender-ref ref="socket" />
+    </logger>
+
+    <logger name="mobi.mixiong.thrift.client" additivity="false">
+        <appender-ref ref="thrift" />
+    </logger>
+
+    <logger name="com.cyril.springboot.thrift.server" additivity="false">
+        <appender-ref ref="thrift" />
+    </logger>
+
+</configuration>

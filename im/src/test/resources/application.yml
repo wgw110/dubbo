@@ -1,0 +1,13 @@
+spring:
+  profiles.active: ${package.environment}
+  main.web-application-type: NONE
+  application.name: im-provider
+dubbo:
+    server: true
+    scan:
+      base-packages: tv.mixiong
+    protocol:
+      name: dubbo
+      port: -1
+server:
+  port: 8076

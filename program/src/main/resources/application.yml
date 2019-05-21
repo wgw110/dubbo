@@ -1,0 +1,12 @@
+spring:
+  profiles.active: ${package.environment}
+  main.web-application-type: NONE
+  application.name: program-provider
+
+dubbo:
+    server: true
+    scan:
+      base-packages: tv.mixiong
+    protocol:
+      name: dubbo
+      port: -1

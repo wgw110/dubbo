@@ -1,0 +1,23 @@
+qcloud:
+    ilvb:
+      sdkAppid: 1400011257
+      privStr: |
+        -----BEGIN PRIVATE KEY-----
+        MIGEAgEAMBAGByqGSM49AgEGBSuBBAAKBG0wawIBAQQg1rltKO+NqfTym6CXk2Jj
+        NZL1s+f1kBQiwBh3RDTlDo+hRANCAAQEufyJqNk6xF7lowH7x0VG3Gzq+HPpZrus
+        S2e/QxHhr1j+a1VrQmRNyDD77dZ7a/EYFnz1luj/ixmdY7zxYjdF
+        -----END PRIVATE KEY-----
+      pubStr: |
+        -----BEGIN PUBLIC KEY-----
+        MFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAEBLn8iajZOsRe5aMB+8dFRtxs6vhz6Wa7
+        rEtnv0MR4a9Y/mtVa0JkTcgw++3We2vxGBZ89Zbo/4sZnWO88WI3RQ==
+        -----END PUBLIC KEY-----
+      manager: api_admin
+      usersig: eJxNkNFOgzAUht*FW41pqbToHQhbQM3GcBfjpqm0206QQmhlqPHd1xBMPJffl5P-nP-He3sp70Tfg*TCcjJI79FD3u2M1dTDoLg4WjU4THBAKHKz6FENBjrtjI9wgH2C-kmQSls4wrwpeuBCtqAXaeDk6Gt6eMqKpCa53BtGdXmZcrs6hBu5zpuY7tb7tirSbropk-AcRPq5yM5R1oRlNSYfD-EmfRcjXZmIUtiyyk5*Si8GnWjW7LbfaWz-wmTD5wddJL53F2LsB2yRFlo1c8r8gDIWLlzUdfepLbdfvZob*b0CQFtY4A__
+xinge:
+  androidAppId: 2100206953
+  androidSecretKey: e117293e0aa185b430e699c107341835
+  iosAppId: 2200206954
+  iosSecretKey: 334def8c01d851e50f07ce8858bd7fcf
+  env: 1
+environment: online

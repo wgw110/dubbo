@@ -1,0 +1,27 @@
+spring:
+  profiles:
+    active: ${package.environment}
+  application.name: mixiong-rest
+  http.multipart:
+    max-file-size: 20MB
+    max-request-size: 20MB
+
+server:
+  port: 9991
+  servlet:
+    context-path: /
+    use-forward-headers: true
+  compression:
+    enabled: true
+    mime-types: application/json,application/xml,text/html,text/xml,text/plain
+    min-response-size: 1024
+  undertow:
+    io-threads: 15
+    worker-threads: 120
+    buffer-size: 1024
+    buffers-per-region: 1024
+    direct-buffers: true
+
+    accesslog:
+      enabled: false
+

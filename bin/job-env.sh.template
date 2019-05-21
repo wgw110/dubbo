@@ -1,0 +1,1 @@
+export JOPTS="-server -Xmx1024m"

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!---公网测试环境下：GTS Scanner配置方式-->
+   <bean class="com.taobao.txc.client.aop.TxcTransactionScaner">
+    <constructor-arg value="myapp"/>
+    <constructor-arg value="txc_test_public.1129361738553704.QD"/>
+    <constructor-arg value="1" />
+    <constructor-arg value="https://test-cs-gts.aliyuncs.com" />
+   </bean>
+</beans>

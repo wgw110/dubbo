@@ -1,0 +1,50 @@
+spring:
+  datasource:
+    url: jdbc:mysql://rm-2zeynm8ur5a991jc1984.mysql.rds.aliyuncs.com:3306/wc?useSSL=false&amp;autoReconnect=true&amp;
+    useUnicode=true&amp;characterEncoding=utf-8
+    username: mxmall
+    password: mxmall1#pwd
+    driver-class-name: com.mysql.jdbc.Driver
+
+  redis:
+    database: 0
+    host: r-2zeb2ca8ed9364f4669.redis.rds.aliyuncs.com
+    port: 6379
+    password: R2disMixiong
+    lettuce:
+      pool:
+        max-active: 1000
+        max-wait: -1
+        max-idle: 500
+        min-idle: 200
+    timeout: 3000
+
+dubbo:
+  consumer:
+    reconnect:
+    check: false
+  registry:
+    address: nacos://nacos.mixiong.tv:8848?namespace=d7f3877c-89b5-4ab2-9af4-2d8957cd2f53
+
+qcloud:
+    ilvb:
+      sdkAppid: 1400011257
+      privStr: |
+        -----BEGIN PRIVATE KEY-----
+        MIGEAgEAMBAGByqGSM49AgEGBSuBBAAKBG0wawIBAQQg1rltKO+NqfTym6CXk2Jj
+        NZL1s+f1kBQiwBh3RDTlDo+hRANCAAQEufyJqNk6xF7lowH7x0VG3Gzq+HPpZrus
+        S2e/QxHhr1j+a1VrQmRNyDD77dZ7a/EYFnz1luj/ixmdY7zxYjdF
+        -----END PRIVATE KEY-----
+      pubStr: |
+        -----BEGIN PUBLIC KEY-----
+        MFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAEBLn8iajZOsRe5aMB+8dFRtxs6vhz6Wa7
+        rEtnv0MR4a9Y/mtVa0JkTcgw++3We2vxGBZ89Zbo/4sZnWO88WI3RQ==
+        -----END PUBLIC KEY-----
+      manager: api_admin
+      usersig: eJxNkNFOgzAUht*FW41pqbToHQhbQM3GcBfjpqm0206QQmhlqPHd1xBMPJffl5P-nP-He3sp70Tfg*TCcjJI79FD3u2M1dTDoLg4WjU4THBAKHKz6FENBjrtjI9wgH2C-kmQSls4wrwpeuBCtqAXaeDk6Gt6eMqKpCa53BtGdXmZcrs6hBu5zpuY7tb7tirSbropk-AcRPq5yM5R1oRlNSYfD-EmfRcjXZmIUtiyyk5*Si8GnWjW7LbfaWz-wmTD5wddJL53F2LsB2yRFlo1c8r8gDIWLlzUdfepLbdfvZob*b0CQFtY4A__
+xinge:
+  androidAppId: 2100206953
+  androidSecretKey: e117293e0aa185b430e699c107341835
+  iosAppId: 2200206954
+  iosSecretKey: 334def8c01d851e50f07ce8858bd7fcf
+  env: 1

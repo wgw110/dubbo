@@ -1,0 +1,24 @@
+qcloud:
+    ilvb:
+      sdkAppid: 1400009168
+      privStr: |
+        -----BEGIN PRIVATE KEY-----
+        MIGEAgEAMBAGByqGSM49AgEGBSuBBAAKBG0wawIBAQQgx8lasOzmXSHu92OmVtLP
+        Cj0PbvLavI1nWUsqPScES4ihRANCAASJ1R2AYLn5pa1jwJVXhRr4/av6yNgVKGEt
+        exIVYun8XgEx3Cmy9URvNRgLvh/rnDQ3o4AJUfRMM9LMTmEI06T0
+        -----END PRIVATE KEY-----
+      pubStr: |
+        -----BEGIN PUBLIC KEY-----
+        MFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAEidUdgGC5+aWtY8CVV4Ua+P2r+sjYFShh
+        LXsSFWLp/F4BMdwpsvVEbzUYC74f65w0N6OACVH0TDPSzE5hCNOk9A==
+        -----END PUBLIC KEY-----
+      manager: 10000
+      usersig: eJxNkN1Og0AQRt*FW43dn7JQk16goakCiXartb3ZbGCBKRE2y4KtxneXEkw6l*fky3wzP8425ndSa8iEtIKazLl3kHM7YnXSYJSQuVVmwBS7lKFhJt0r00JTD4Yg7GJC0ZWETNUWchiT*Eq0UAwkCV8fnx6ieKPf*XZXrpuQ72gx2-vVB135rDymB550blCevJf197MKIEhu4HxYhZJERiWQE7lPSVe8bY79ImIVnXnS67*I5W0cLJf-y7JKjMddSswvLRaY*ZO08KlGzubEpcjzJi7TtOlqK*xZq-Ebv3-AClYh
+      accountType: 4840
+xinge:
+  androidAppId: 2100201917
+  androidSecretKey: b17668f9782eb234023d2bb58008152f
+  iosAppId: 2200201918
+  iosSecretKey: 48d8ffb61c650db2e082b41e52e9b899
+  env: 2
+environment: test
